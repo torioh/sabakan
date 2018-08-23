@@ -1,0 +1,121 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="newUI.css" />
+  <script src="core.js"></script>
+  <script src="data.js"></script>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>英単語ゲーム - 中学英語からTOIECまで10,000万語をレベル別に出題されます</title>
+  <meta name="keywords" content="英単語,ゲーム,英語,高校,中学,言葉,発音,テック,10,000万語,無料,学習,テスト,得点,覚える " />
+  <meta name="description" content="ゲーム感覚で楽しく英単語を覚えられます。高得点目指して頑張りましょう" />
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="英単語ゲーム">
+  <meta property="og:description" content="ゲーム感覚で楽しく英単語と発音を覚えられます。高得点目指して頑張りましょう">
+  <meta property="og:site_name" content="英単語ゲーム">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-82118372-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+<body>
+
+<header id="a-box">
+  <h1>英単語ゲーム　べーたー version 0.1</h1>
+  <label id="subtitle">英単語をゲーム感覚で楽しく覚えることができます。高得点目指してチャレンジしよう！</label>
+</header>
+
+
+<div id="site-box">
+  <!-- Init screen -->
+  <div id="init-page">
+    <p id="intro">
+      　このサイトは英単語をゲーム感覚で楽しく学習することができるサイトです。はじめにレベルを選択します。
+      レベルは中学１年生から高校３年生を想定しています。ゲームは５問間違えるまで続きますので、高得点目指してチャレンジしてみましょう。
+      毎日、繰返し行うことで効率よく学習することができます。それでは学習したいレベルの英単語のボタンをクリックしてゲームを開始しましょう！
+    </P>
+    <div class="buttons">
+      <ul><li><button type="button" class="btn_start" id="l1" onClick="startGame(id)">中１レベル</button><button type="button" class="btn_start" id='l4' onClick="startGame(id)">高１レベル</button></li></ul>
+      <ul><li><button type="button" class="btn_start" id='l2' onClick="startGame(id)">中２レベル</button><button type="button" class="btn_start" id='l5' onClick="startGame(id)">高２レベル</button></li></ul>
+      <ul><li><button type="button" class="btn_start" id='l3' onClick="startGame(id)">中３レベル</button><button type="button" class="btn_start" id='l6' onClick="startGame(id)">高３レベル</button></li></ul>
+    </div>
+  </div>
+
+  <!-- this page appears after start -->
+  <div id="b-box">
+    <h2 id='h1'>question</h2>
+    <p id="ans">○</p>
+
+    <div class="buttons">
+      <ul><li><button type="button" class="btn_red" id="0" onClick="checkAnswer(name)">answer1</button><button type="button" class="btn_yellow" id='1' onClick="checkAnswer(name)">answer2</button></li></ul>
+      <ul><li><button type="button" class="btn_blue" id='2' onClick="checkAnswer(name)">answer3</button><button type="button" class="btn_green" id='3' onClick="checkAnswer(name)">answer4</button></li></ul>
+    </div>
+
+    <table class="metrics">
+      <tr>
+        <th><label>スコア</label></th>
+        <th><label>正解数</label></th>
+        <th><label>不正解</label></th>
+        <th><label>正解率</label></th>
+        <th><label>連続正解</label></th>
+      </tr>
+      <tr>
+        <td><h5 id="points">0</h5></td>
+        <td><h5 id="total_correct_num">0</h5></td>
+        <td><h5 id="total_wrong_num">0</h5></td>
+        <td><h5 id="correct_percentage">0</h5></td>
+        <td><h5 id="succession_num">0</h5></td>
+      </tr>
+    </table>
+
+
+  	<audio id="correct_sound" preload="auto"><source src="correct2.mp3" type="audio/mp3"></audio>
+  	<audio id="incorrect_sound" preload="auto"><source src="incorrect2.mp3" type="audio/mp3"></audio>
+  </div>
+
+  <div id="c-box">
+    <div class="ads">Ads</div>
+    <div class="ads">Ads</div>
+  </div>
+
+</div>
+
+<footer id="d-box">
+
+copyright (c) zetalabo.com All right reserved.
+
+</footer>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">x</span>
+    <p>your score is <label id="score">0</label></p>
+	<table id="result">
+		<tr><th>question</th><th>your answer</th><th>correct answer</th></tr>
+		<tr><td></td><td></td><td></td></tr>
+		<tr><td></td><td></td><td></td></tr>
+		<tr><td></td><td></td><td></td></tr>
+		<tr><td></td><td></td><td></td></tr>
+		<tr><td></td><td></td><td></td></tr>
+	</table>
+
+  <div class="modal_btn">
+    <ul><li><button type="button" class="modal_btn" onClick="location.reload()";>トップに戻る</button></li></ul>
+  </div>
+</div>
+
+</body>
+
+</html>

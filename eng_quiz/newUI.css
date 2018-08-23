@@ -1,0 +1,277 @@
+*  {
+          padding : 0px ;
+          margin : 0px ;
+          font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
+}
+
+#site-box {
+		      width : 980px;
+          margin : 10px auto;
+      }
+
+@media screen and (max-width:400px) {
+  #site-box {
+  		      width : auto;
+            margin : 10px auto;
+        }
+}
+
+#a-box {
+          border-bottom: 1px solid #c0c0c0;
+          padding: 20px;
+}
+
+#init-page {
+          float: left;
+          width: 660px;
+}
+@media screen and (max-width:400px) {
+  #init-page {
+            width: auto;
+  }
+}
+
+
+#b-box {
+          display: none;
+          float: left;
+          width: 660px;
+}
+@media screen and (max-width:400px) {
+  #b-box {
+            display: none;
+            width: auto;
+  }
+}
+
+#c-box {
+          float: right;
+          width: 300px;
+          font-size: 12px;
+          margin-left: 20px;
+}
+@media screen and (max-width:400px) {
+  #c-box {
+            display: none;
+            width: auto;
+            font-size: 12px;
+            margin-left: 20px;
+  }
+}
+
+#d-box {
+          clear: both;
+          font-size: 12px;
+          margin-top: 20px;
+          text-align: center;
+}
+
+h1 {
+          font-size: 24px;
+          color:#2eba7d;
+}
+
+
+h2 {
+          font-size: 48px;
+          padding: 10px;
+          margin: 5px;
+          text-align: center;
+          margin-top: 20px;
+          margin-bottom: 20px;
+          border-radius: 20px;
+          -moz-border-radius: 20px;
+          -webkit-border-radius: 20px;
+          color:#00be5d;
+
+}
+
+h3 {
+          font-size: 15px;
+          color:#FF9900;
+          margin: 5px;
+}
+
+h5 {
+          font-size: 30px;
+          margin: 5px;
+          color: rgb(241, 115, 69);
+
+}
+
+p {
+          font-size: 14px;
+          margin: 30px;
+}
+
+ul {
+          list-style: none;
+          height: 70px;
+}
+
+#subtitle {
+          color: rgb(255, 255, 255);
+          font-size: 18px;
+        }
+
+#intro {
+          background-color: rgb(255, 255, 255);
+          color: #00a394;
+}
+
+#ans {
+          font-size: 20px;
+          text-align: center;
+          margin-bottom: 80px;
+          color: #2eba7d;
+
+}
+
+.metrics {
+          margin-top: 30px;
+          margin-bottom: 30px;
+          margin-left: 25px;
+}
+
+.metrics th {
+}
+.metrics label {
+          color: rgb(241, 115, 69);
+}
+
+.metrics td {
+          height: 100px;
+          width: 120px;
+          text-align: center;
+}
+
+.ads {
+          font-size: 14px;
+          color: #2eba7d;
+          padding: 5px;
+          margin-bottom: 250px;
+}
+.buttons {
+          margin-bottom: 10px;
+        }
+
+button:hover {
+    color: rgb(121, 251, 232);
+    cursor: hand;
+}
+button:focus {
+    outline: none;
+}
+
+.btn_start {
+    color: #2eba7d;
+    width: 330px;
+    height: 70px;
+    font-size: 18px;
+    border: 10px rgb(255, 255, 255) solid;
+
+}
+
+.btn_red {
+    color: #2eba7d;
+    width: 330px;
+    height: 70px;
+    font-size: 18px;
+    border: 10px rgb(255, 255, 255) solid;
+}
+
+.btn_yellow {
+    color: #2eba7d;
+    width: 330px;
+    height: 70px;
+    font-size: 18px;
+    border: 10px rgb(255, 255, 255) solid;
+
+}
+
+.btn_blue {
+    color: #2eba7d;
+    width: 330px;
+    height: 70px;
+    font-size: 18px;
+    border: 10px rgb(255, 255, 255) solid;
+
+}
+
+.btn_green {
+    color: #2eba7d;
+    width: 330px;
+    height: 70px;
+    font-size: 18px;
+    border: 10px rgb(255, 255, 255) solid;
+
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    animation: fadeIn 2s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal_btn {
+  background: #00cfbc;
+  color: #2eba7d;
+  width: 330px;
+  height: 70px;
+  font-size: 18px;
+  border: 10px rgb(255, 255, 255) solid;
+
+}
+
+#score {
+    font-size: 48px;
+    color: #00a394;
+}
+#score p{
+    color: red;
+}
+/* table */
+#result tr:nth-child(even) td {
+	background-color: rgb(209, 239, 250);
+}
+
+#result tr:nth-child(odd) td {
+	background-color: rgb(255, 255, 255);
+}
